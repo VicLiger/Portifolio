@@ -15,6 +15,19 @@
     position: relative;
     left: 3vw;
 }
+.title-bar span {
+    color: rgb(0, 255, 0); /* Cor do texto neon */
+    font-weight: bold; /* Deixa o texto mais "forte" */
+    
+    /* Neon leve em torno das letras */
+    text-shadow: 
+        0 0 2px rgb(0, 255, 0), /* Brilho bem próximo ao texto */
+        0 0 4px rgb(0, 255, 0); /* Brilho suave um pouco mais afastado */
+    
+    /* Nenhuma sombra externa (drop-shadow) para focar só no texto */
+}
+
+
 
 .options-bar ul{
     position: relative;
@@ -91,12 +104,6 @@
     border-bottom: 2px solid transparent; 
     transition: border-bottom 10s ease; 
 }
-
-.enlarged.active {
-    border-bottom: 2px solid green; /* Borda verde quando ativo */
-}
-
-
 
 
 .options-bar ul li:hover {

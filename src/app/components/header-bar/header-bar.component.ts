@@ -18,16 +18,18 @@ export class HeaderBarComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  setActive(item: number): void {
-    this.activeItem = item; // Define o item clicado como ativo
+  // Método para definir o item ativo
+  setActive(index: number): void {
+    this.activeItem = index; // Armazena o índice do item clicado
   }
 
-  isClicked(item: number): boolean {
-    return this.activeItem === item; // Verifica se o item é o ativo
+  // Verifica se o item é o ativo
+  isClicked(index: number): boolean {
+    return this.activeItem === index; // Retorna true se o item for o ativo
   }
 
-  toggleMenu() {
-    this.isMenuVisible = !this.isMenuVisible; 
-    console.log('Menu visibility:', this.isMenuVisible); // Log para verificar o estado
-}
+  // Método para alternar a visibilidade do menu
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
 }

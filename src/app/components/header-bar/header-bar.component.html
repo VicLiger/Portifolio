@@ -1,24 +1,27 @@
 <header>
-  <div class="container-header-bar">
-    <div class="container-title">
-      <h1>
-        Victor
-        <span>Liger</span>
-      </h1>
-    </div>
+    <div class="container-header-bar">
+        <div class="container-title">
+            <h1>
+                Victor
+                <span>Liger</span>
+            </h1>
+        </div>
 
-    <div class="container-options">
-      <!-- Botão do menu que aparece em telas menores -->
-      <button class="menu-btn" (click)="toggleMenu()" *ngIf="isMenuVisible === false">&#9776;</button>
-      
-      <!-- Menu que aparece apenas em telas maiores -->
-      <ul [ngClass]="{'show': isMenuVisible}">
-        <li *ngFor="let item of optionsList; let i = index" (click)="setActive(i)">
-          <a href="#">
-            <span [ngClass]="{'enlarged': isClicked(i)}">{{ item }}</span>
-          </a>
-        </li>
-      </ul>
+        <div class="container-options">
+            <!-- Botão do menu que aparece em telas menores -->
+            <button class="menu-btn" (click)="toggleMenu()">&#9776;</button>
+
+            
+            <!-- Menu que aparece apenas em telas maiores -->
+            <ul [ngClass]="{'show': isMenuVisible}">
+                <li *ngFor="let item of optionsList; let i = index" 
+                    (click)="setActive(i)"
+                    [ngClass]="{'enlarged': isClicked(i)}"> <!-- Aplique a classe enlarged no <li> -->
+                    <a href="#">
+                        <span>{{ item }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </header>

@@ -1,115 +1,99 @@
-.content-bar {
+.container-header-bar {
     position: fixed;
+    width: 100%;
+    height: 15vh;
+    color: white;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 14vh; 
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    color: white;
-    border-bottom: 2px solid white; 
+    background-color: var(--bg);
 }
 
-
-.title-bar{
-    position: relative;
-    left: 3vw;
-}
-.title-bar span {
-    color: rgb(0, 255, 0); /* Cor do texto neon */
-    font-weight: bold; /* Deixa o texto mais "forte" */
-    
-    /* Neon leve em torno das letras */
+.container-title span {
+    color: var(--fcr); /* Cor principal */
     text-shadow: 
-        0 0 2px rgb(0, 255, 0), /* Brilho bem próximo ao texto */
-        0 0 4px rgb(0, 255, 0); /* Brilho suave um pouco mais afastado */
-    
-    /* Nenhuma sombra externa (drop-shadow) para focar só no texto */
+        0 0 5px var(--fcr),  /* Primeiro brilho mais próximo */
+        0 0 10px var(--fcr), /* Segundo brilho */
+        0 0 30px var(--fcr), /* Terceiro brilho */
+        0 0 50px var(--fcr), /* Brilho mais intenso */
+        0 0 40px var(--fcr), /* Brilho externo */
+        0 0 50px var(--fcr); /* Brilho extra externo */
+    font-weight: bold; /* Negrito para destacar mais */
 }
 
 
+.container-options {
+    font-size: 18px;
+}
 
-.options-bar ul{
+.container-options ul {
     position: relative;
-    font-size: 20px;
-    right: 3vw;
-}
-
-.options-bar ul{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    top: 1vh;
+    gap: 2vw;
     list-style: none;
-    gap: 5vw;
 }
 
-.options-bar ul li a {
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit; /* Herda a cor do li */
-    display: block; /* Faz a tag <a> ocupar toda a área do li */
-    height: 100%; /* Garante que ocupe toda a altura do li */
-}
-
-.content-bar {
-    position: fixed;
+.container-options ul li {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 14vh; 
     align-items: center;
-    justify-content: space-between;
-    color: white;
-    border-bottom: 2px solid white; 
-}
-
-
-.title-bar{
-    position: relative;
-    left: 3vw;
-}
-
-.options-bar ul{
-    position: relative;
-    font-size: 20px;
-    right: 3vw;
-}
-
-.options-bar ul{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    list-style: none;
-    gap: 5vw;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 15px;
+    padding: 10px 20px; /* Adicione preenchimento aqui */
 }
 
-.options-bar ul li a {
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit; /* Herda a cor do li */
-    display: block; /* Faz a tag <a> ocupar toda a área do li */
-    height: 100%; /* Garante que ocupe toda a altura do li */
+.container-options ul li a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: inherit; /* Mantém a cor do texto como a do li */
+    display: block; /* Faz o link ocupar todo o espaço do li */
+    width: 100%; /* Garante que o link ocupe toda a largura do li */
+    height: 100%; /* Garante que o link ocupe toda a altura do li */
 }
 
-.options-bar ul li {
+.container-options ul li:hover {
+    background-color: var(--fcr);
+    transform: scale(1.2);
     cursor: pointer;
-    transition: transform 0.3s; 
+    color: inherit;
 }
-
-.options-bar ul li:hover {
-    transform: scale(1.25); 
-}
-
 
 .enlarged {
-    color: rgb(0, 255, 0);
-    border-bottom: 2px solid transparent; 
-    transition: border-bottom 10s ease; 
+    background-color: var(--fcr);
+    transform: scale(1.2);
+    cursor: pointer;
+    color: inherit;
+    border-bottom: 2px solid green; /* Adicione esta linha se quiser uma borda verde */
 }
 
 
-.options-bar ul li:hover {
-    transform: scale(1.25); 
+/* Estilos para o botão do menu */
+.menu-btn {
+    display: none; /* Escondido por padrão */
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
+.container-options ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    gap: 5vw;
+    transition: all 0.3s ease; /* Suaviza a transição do menu */
+}
+
+
+
+    
+    
+    
+    
 
 
 

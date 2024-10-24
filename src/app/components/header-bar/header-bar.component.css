@@ -91,14 +91,17 @@
     }
 
     .container-options ul {
+        background-color: var(--bg);
+        border: 1px solid;
+        border-radius: 50px;
         display: none; /* Oculta o menu por padrão */
         flex-direction: column; /* Alinha os itens verticalmente */
         position: absolute; /* Para que o menu se sobreponha ao conteúdo */
         border-radius: 5px; /* Bordas arredondadas */
         z-index: 1000; /* Para garantir que o menu fique acima de outros elementos */
         padding: 10px; /* Adiciona um pouco de preenchimento ao menu */
-        right: 3vw
-        /* Adicionando a borda branca */
+        top: 8vh;
+        margin-right: 20px; /* Define uma margem mínima à direita */
     }
     
     
@@ -114,3 +117,26 @@
         color: white;
     }
 }
+
+
+
+@media (max-width: 720px) {
+
+    .container-options ul {
+        background-color: var(--bg);
+        border: 1px solid;
+        border-radius: 50px;
+        display: none; /* Oculta o menu por padrão */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        position: absolute; /* Para que o menu se sobreponha ao conteúdo */
+        border-radius: 5px; /* Bordas arredondadas */
+        z-index: 1000; /* Para garantir que o menu fique acima de outros elementos */
+        padding: 10px; /* Adiciona um pouco de preenchimento ao menu */
+        top: 8vh;
+        right: 1vw;
+    }
+  
+}
+
+
+

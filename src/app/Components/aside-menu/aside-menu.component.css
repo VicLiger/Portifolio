@@ -1,0 +1,81 @@
+.navigation {
+    position: fixed; /* Fixa o elemento na tela */
+    top: 20px; /* Define a distância do topo, se necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o elemento para ficar centralizado */
+    width: 400px; /* Largura da navegação */
+    height: 80px; /* Altura da navegação */
+    background-color: #333; /* Cor de fundo */
+    border: solid #333 1px; /* Borda da navegação */
+    border-radius: 11px; /* Bordas arredondadas */
+    z-index: 1000; /* Garante que o menu fique por cima de outros elementos */
+}
+
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 85px;
+    text-align: center;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+.navigation ul li.active a .icon{
+    font-size: 1.5em;
+    transform: translateY(-8px);
+    
+}
+
+.navigation ul li a .text{
+    position: absolute;
+    font-size: 0.8em;
+    bottom: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.25s;
+    letter-spacing: 0.1em;
+    transform: scale(0);
+}
+
+.navigation ul li.active a .text{
+    transform: scale(1);
+}
+
+.navigation ul .indicator{
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: #222;
+    border-radius: 10px;
+    transition: 0.5s;
+}

@@ -34,8 +34,14 @@
   }
   
   .buttons {
-    margin-top: 20px;
-  }
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  flex-direction: row; /* Alinha os itens horizontalmente (padrão) */
+  gap: 10px; /* Espaço entre os botões */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
 
   .buttons a{
     text-decoration: none;
@@ -54,6 +60,7 @@
   
   .btn.primary {
     background-color: #6c63ff;
+    margin: auto 0;
     color: #fff;
   }
   
@@ -76,10 +83,37 @@
   }
 
   .bar{
-    width: 50vw;
+    width: 50rem;
     height: 2vh;
     background-color: #6c63ff;
     border: solid 2px #6c63ff;
     border-radius: 50px;
     margin: auto;
   }
+
+
+  @media screen and (max-width: 900px) {
+    .bar{
+        width: 80vw;
+    }
+
+    .title {
+        font-size: 10vw;
+        line-height: 1.2;
+      }
+
+      .title .engeineer{
+        font-size: 11vw;
+        line-height: 1.2;
+      }
+  }
+
+ 
+@media screen and (max-width: 610px) {
+    .buttons {
+      flex-direction: column;
+      gap: 10px; /* Espaço entre os botões, se necessário */
+      align-items: center; /* Para centralizar os botões */
+    }
+  }
+  

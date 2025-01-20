@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -10,15 +10,18 @@ import { CommonModule } from '@angular/common';
   templateUrl: './aside-menu.component.html',
   styleUrl: './aside-menu.component.css'
 })
-export class AsideMenuComponent {
+export class AsideMenuComponent implements OnInit{
+  ngOnInit(): void {
+    this.onMouseOver(0, this.navigationItems[0]);
+  }
   activeIndex: number = 0; // Para garantir que o primeiro item tenha a classe "active"
 
   navigationItems = [
-    { icon: 'fa-solid fa-house', text: 'Home', color: '#f53b57' },
+    { icon: 'fa-solid fa-house', text: 'Home', color: '#5d62fb' },
     { icon: 'fa-solid fa-user', text: 'Profile', color: '#5d62fb' },
-    { icon: 'fa-solid fa-laptop', text: 'Skills', color: '#05c46b' },
-    { icon: 'fa-solid fa-folder', text: 'Projects', color: '#0fbcf9' },
-    { icon: 'fa-solid fa-phone', text: 'Contact', color: '#ffa801' }
+    { icon: 'fa-solid fa-laptop', text: 'Skills', color: '#5d62fb' },
+    { icon: 'fa-solid fa-folder', text: 'Projects', color: '#5d62fb' },
+    { icon: 'fa-solid fa-phone', text: 'Contact', color: '#5d62fb' }
   ];
 
   indicatorStyle = {
